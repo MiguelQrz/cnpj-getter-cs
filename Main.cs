@@ -64,8 +64,9 @@ try
             await Task.Delay(5);
         }
         Console.ResetColor();
-        Console.WriteLine("\n--- Dados Recebidos (JSON) ---");
+        Console.WriteLine("\n--- DADOS ENCONTRADOS ---");
         Console.WriteLine(jsonBonito);
+        Console.WriteLine("\n--- FIM DA CONSULTA ---");
         }
         else
         {
