@@ -1,0 +1,6 @@
+@CnpjGetter_HostAddress = http://localhost:5143
+
+GET {{CnpjGetter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
