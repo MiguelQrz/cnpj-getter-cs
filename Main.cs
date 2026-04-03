@@ -2,13 +2,17 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Encodings.Web;
 
-Console.WriteLine("Digite um CNPJ para consultar (Ex: 00000000000000): ");
-string? cnpj = Console.ReadLine();
-
-if (cnpj == null || cnpj.Length != 14 || !ulong.TryParse(cnpj, out _))
+string? cnpj = null;
+void writeCnpj()
 {
-    Console.WriteLine("CNPJ inválido. Certifique-se de digitar 14 dígitos numéricos.");
-    return;
+    Console.WriteLine("Digite um CNPJ para consultar (Ex: 00000000000000): ");
+    cnpj = Console.ReadLine();
+}
+
+while (cnpj == null || cnpj.Trim().Length != 14 || !ulong.TryParse(cnpj, out _))
+{
+    Console.WriteLine("CNPJ inválido. Certifique-se de digitar 14 dígitos numéricos.\n");
+    writeCnpj();
 }
 
 try
@@ -76,4 +80,9 @@ try
 catch (Exception ex)
 {
     Console.WriteLine($"Erro ao conectar na API: {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Pressione qualquer tecla para sair...");
+    Console.ReadKey();
 }
