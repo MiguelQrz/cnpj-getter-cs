@@ -6,7 +6,7 @@ Aplicação de linha de comando desenvolvida em **C# com .NET** para consultar d
 ## 🚀 Funcionalidades
 
 * Consulta de dados de empresas via CNPJ
-* Exibição formatada no terminal
+* Exibição diretamente no terminal
 * Validação de CNPJ
 * Integração com API pública de dados
 
